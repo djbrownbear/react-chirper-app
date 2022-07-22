@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import Tweet from "./Tweet";
 
 const Dashboard = (props) => {
 
@@ -8,7 +9,7 @@ const Dashboard = (props) => {
       <ul className="dashboard-list">
         {props.tweetIds.map((id) => (
           <li key={id}>
-            <div>TWEET ID: {id}</div>
+            <Tweet id={id}/>
           </li>
         ))}
       </ul>
@@ -16,10 +17,10 @@ const Dashboard = (props) => {
   );
 };
 
-const mapStatToProps = ({ tweets }) => ({
+const mapStateToProps = ({ tweets }) => ({
     tweetIds: Object.keys(tweets).sort(
       (a, b) => tweets[b].timestamp - tweets[a].timestamp
     ),
 });
 
-export default connect(mapStatToProps)(Dashboard);
+export default connect(mapStateToProps)(Dashboard);
