@@ -1,25 +1,23 @@
-import logo from '../logo.svg';
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import { handleInitialData } from "../actions/shared";
+import Dashboard from "./Dashboard";
 import '../App.css';
+import authedUser from "../reducers/authedUsers";
 
-const App = () => {
+const App = (props) => {
+  
+  useEffect(() =>{
+    props.dispatch(handleInitialData())
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>{props.loading === true ? null : <Dashboard />}</div>
   );
 }
 
-export default App;
+const mapStateToProps = ({ authedUser }) => ({
+  loading: authedUser === null,
+});
+
+export default connect()(App);
