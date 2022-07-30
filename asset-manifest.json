@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/djbrownbear/react-chirper-app/static/css/main.ef4a2029.css",
+    "main.js": "/djbrownbear/react-chirper-app/static/js/main.374c8c60.js",
+    "static/js/787.b13ff370.chunk.js": "/djbrownbear/react-chirper-app/static/js/787.b13ff370.chunk.js",
+    "index.html": "/djbrownbear/react-chirper-app/index.html",
+    "main.ef4a2029.css.map": "/djbrownbear/react-chirper-app/static/css/main.ef4a2029.css.map",
+    "main.374c8c60.js.map": "/djbrownbear/react-chirper-app/static/js/main.374c8c60.js.map",
+    "787.b13ff370.chunk.js.map": "/djbrownbear/react-chirper-app/static/js/787.b13ff370.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef4a2029.css",
+    "static/js/main.374c8c60.js"
+  ]
+}
