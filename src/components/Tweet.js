@@ -38,7 +38,7 @@ const Tweet = (props) => {
 
   const toParent = (e, id) => {
     e.preventDefault();
-    navigate(`/react-chirper-app/tweet/${id}`);    
+    navigate(`/tweet/${id}`);    
   };
 
   if (props.tweet === null) {

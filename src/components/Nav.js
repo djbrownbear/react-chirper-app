@@ -5,10 +5,10 @@ const Nav = () => {
     <nav className="nav">
       <ul>
         <li>
-          <Link to="/react-chirper-app/">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/react-chirper-app/new">New Tweet</Link>
+          <Link to="/new">New Tweet</Link>
         </li>
       </ul>
     </nav>
