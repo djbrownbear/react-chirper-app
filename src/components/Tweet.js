@@ -38,8 +38,7 @@ const Tweet = (props) => {
 
   const toParent = (e, id) => {
     e.preventDefault();
-    navigate(`/tweet/${id}`)
-    
+    navigate(`/tweet/${id}`);    
   };
 
   if (props.tweet === null) {
@@ -90,10 +89,10 @@ const Tweet = (props) => {
         </div>         
       </div>
     </Link>
-  )
-}
+  );
+};
 
-const mapStateToProps = ({ authedUser, users, tweets }, {id}) => {
+const mapStateToProps = ({ authedUser, users, tweets }, { id }) => {
   const tweet = tweets[id];
   const parentTweet = tweet ? tweets[tweet.replyingTo] : null;
 

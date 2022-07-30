@@ -25,13 +25,12 @@ export default function tweets(state = {}, action) {
       
       let replyingTo = {};
       if (tweet.replyingTo !== null) {
-          const allReplies = state[tweet.replyingTo].replies.concat([tweet.id]);
-
-          return {
-          ...state,
-          [action.tweet.id]: action.tweet,
-          [action.tweet.replyingTo.replies]: allReplies
-          }
+        replyingTo = {
+          [tweet.replyingTo]: {
+            ...state[tweet.replyingTo],
+            replies: state[tweet.replyingTo].replies.concat([tweet.id]),
+          },
+        };
       }
       
       return {

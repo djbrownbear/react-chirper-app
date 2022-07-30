@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { handleInitialData } from "../actions/shared";
 import Dashboard from "./Dashboard";
 import '../App.css';
-import authedUser from "../reducers/authedUsers";
+// import authedUser from "../reducers/authedUsers";
 import NewTweet from "./NewTweet";
 import TweetPage from "./TweetPage";
 import Nav from "./Nav";
@@ -14,23 +14,23 @@ const App = (props) => {
   
   useEffect(() =>{
     props.dispatch(handleInitialData())
-  }, []);
+  }, [props]);
 
   return (
     <Fragment>
-        <LoadingBar />
-        <div className="container">
-          <Nav />
-          {
-            props.loading === true ? null : (
-              <Routes>
-                <Route path="/" exact element={<Dashboard />} />
-                <Route path="/tweet/:id" exact element={<TweetPage />} />
-                <Route path="/new" exact element={<NewTweet />} />
-              </Routes>
-            )
-          }
-        </div>
+      <LoadingBar />
+      <div className="container">
+        <Nav />
+        {
+          props.loading === true ? null : (
+            <Routes>
+              <Route path="/" exact element={<Dashboard />} />
+              <Route path="/tweet/:id" element={<TweetPage />} />
+              <Route path="/new" element={<NewTweet />} />
+            </Routes>
+          )
+        }
+      </div>
     </Fragment>
   );
 };

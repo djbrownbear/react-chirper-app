@@ -8,15 +8,13 @@ const withRouter = (Component) => {
     let location = useLocation();
     let navigate = useNavigate();
     let params = useParams();
-    return <Component {...props} router={{ location, navigate, params }} />
+    return <Component {...props} router={{ location, navigate, params }} />;
   };
 
   return ComponentWithRouterProp;
 };
 
 const TweetPage = (props) => { 
-  console.log(props);
-
   return (
     <div>
       <Tweet id={props.id} />
@@ -35,7 +33,7 @@ const TweetPage = (props) => {
       </ul>
     </div>
   );
-}
+};
 
 const mapStateToProps = ({authedUser, tweets, users}, props) => {
   const { id } = props.router.params;
