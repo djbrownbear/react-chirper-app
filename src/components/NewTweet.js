@@ -21,7 +21,7 @@ const NewTweet = ({ dispatch, id }) => {
     setText("");
     
     if (!id) {
-      navigate("/");
+      navigate("/react-chirper-app");
     }
   };
 
