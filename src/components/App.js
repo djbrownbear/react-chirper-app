@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard";
 import '../App.css';
 import authedUser from "../reducers/authedUsers";
 import NewTweet from "./NewTweet";
+import TweetPage from "./TweetPage";
 import LoadingBar from "react-redux-loading-bar";
 
 const App = (props) => {
@@ -16,7 +17,13 @@ const App = (props) => {
   return (
       <div>
         <LoadingBar />
-        {props.loading === true ? null : <NewTweet />}
+        {props.loading === true ? null : (
+          <TweetPage 
+            match={{
+              params: { id:"8xf0y6ziyjabvozdd253nd" },
+            }} 
+          />
+        )}
       </div>
   );
 }
