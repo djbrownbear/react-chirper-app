@@ -24,9 +24,9 @@ const App = (props) => {
         {
           props.loading === true ? null : (
             <Routes>
-              <Route path="/" exact element={<Dashboard />} />
-              <Route path="/tweet/:id" element={<TweetPage />} />
-              <Route path="/new" element={<NewTweet />} />
+              <Route path="/react-chirper-app" exact element={<Dashboard />} />
+              <Route path="/react-chirper-app/tweet/:id" element={<TweetPage />} />
+              <Route path="/react-chirper-app/new" element={<NewTweet />} />
             </Routes>
           )
         }
