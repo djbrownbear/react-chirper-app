@@ -1,3 +1,7 @@
+# Visit the Live Project
+
+Open [React-Chirper-App](https://aaron.aaronandanita.com/react-chirper-app) to view in your browser.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
